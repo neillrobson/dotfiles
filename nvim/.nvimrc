@@ -50,10 +50,6 @@ let mapleader="\<SPACE>"
 nmap ; :
 nmap Q @q
 nmap <silent> <leader>/ :nohlsearch<CR>
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
 map <C-n> :bn<CR>
 map <C-p> :bp<CR>
-let g:user_emmet_leader_key = '<C-i>'
+let g:user_emmet_leader_key = '<leader>y'
