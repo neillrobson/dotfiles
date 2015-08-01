@@ -52,4 +52,4 @@ nmap Q @q
 nmap <silent> <leader>/ :nohlsearch<CR>
 map <C-n> :bn<CR>
 map <C-p> :bp<CR>
-let g:user_emmet_leader_key = '<leader>y'
+let g:user_emmet_leader_key = '<C-s>'
