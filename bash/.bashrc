@@ -1,5 +1,5 @@
 # The command prompt
-PS1="\u@\h:\w\$ "
+PS1="\u@\h:\W\$ "
 
 # enable 256 colors
 export TERM="xterm-256color"

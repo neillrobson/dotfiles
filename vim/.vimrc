@@ -1,7 +1,7 @@
 filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.nvim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " ***Plugins go here***
@@ -11,9 +11,11 @@ Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-dispatch'
+Plugin 'Raimondi/delimitMate'
 Plugin 'bling/vim-airline'
-Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'mustache/vim-mustache-handlebars'
 " ***End plugin list***
 
 call vundle#end()
@@ -21,33 +23,39 @@ call vundle#end()
 
 " Syntax highlighting
 filetype plugin indent on
-syntax on
+syntax enable
 
 " Tabs are always 4 literal spaces
 set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" Well, JavaScript is typically two spaces
+autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2
+
 " General config
-set mouse=""
-set relativenumber
-set number
-set nowrap
+set mouse-=a " no mouse
+set relativenumber " line numbers count away from cursor
+set number " display line numbers
+set nowrap " Let text run off end of screen
 set hidden " hide buffers, don't close them
-set title
+set title " show current file being edited on window bar (of the OS)
+set timeoutlen=1000 ttimeoutlen=0 " Immediately return to normal mode with escape
+
+" delimitMate settings
+let delimitMate_expand_cr = 1 " tab in when <CR> is hit within parens
 
 " Color scheme
 set background=light
-colorscheme PaperColor
+colorscheme solarized
 
 " Airline settings
-let g:airline_theme='papercolor'
+let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
 set laststatus=2 " Without this, must split before airline appears
 set noshowmode " Get rid of the typical mode indicator
 
 " Shortcuts and remaps
-let mapleader="\<SPACE>"
 nmap ; :
 nmap Q @q
 nmap <silent> <leader>/ :nohlsearch<CR>
