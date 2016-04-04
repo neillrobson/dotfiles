@@ -1,5 +1,3 @@
-filetype off
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -16,6 +14,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'reedes/vim-lexical'
 " ***End plugin list***
 
 call vundle#end()
@@ -30,8 +29,13 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-" Well, JavaScript is typically two spaces
-autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2
+" Spellcheck config
+augroup lexical
+    autocmd!
+    autocmd FileType markdown,mkd call lexical#init()
+    autocmd FileType textile call lexical#init()
+    autocmd FileType text call lexical#init({ 'spell': 0 })
+augroup END
 
 " General config
 set mouse-=a " no mouse
@@ -46,7 +50,7 @@ set timeoutlen=1000 ttimeoutlen=0 " Immediately return to normal mode with escap
 let delimitMate_expand_cr = 1 " tab in when <CR> is hit within parens
 
 " Color scheme
-set background=light
+set background=dark
 colorscheme solarized
 
 " Airline settings
