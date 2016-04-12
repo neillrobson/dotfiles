@@ -15,6 +15,7 @@ Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'reedes/vim-lexical'
+Plugin 'ctrlpvim/ctrlp.vim'
 " ***End plugin list***
 
 call vundle#end()
@@ -63,6 +64,4 @@ set noshowmode " Get rid of the typical mode indicator
 nmap ; :
 nmap Q @q
 nmap <silent> <leader>/ :nohlsearch<CR>
-map <C-n> :bn<CR>
-map <C-p> :bp<CR>
 let g:user_emmet_leader_key = '<C-s>'
