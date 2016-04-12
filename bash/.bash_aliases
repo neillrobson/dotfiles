@@ -8,3 +8,4 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias python='python3'
+alias npm-exec='PATH=$(npm bin):$PATH'
