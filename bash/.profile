@@ -25,4 +25,5 @@ fi
 export TERM=xterm-256color
 
 # Set capslock tap to mean escape
-xcape -e 'Control_L=Escape'
+if command -v xcape 2>/dev/null; then
+    xcape -e 'Control_L=Escape'
