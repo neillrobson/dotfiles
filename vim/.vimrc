@@ -3,19 +3,23 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " ***Plugins go here***
-Plugin 'gmarik/Vundle.vim'
-Plugin 'othree/html5.vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-dispatch'
-Plugin 'Raimondi/delimitMate'
-Plugin 'bling/vim-airline'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'reedes/vim-lexical'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'gmarik/Vundle.vim' " Plugin manager
+Plugin 'othree/html5.vim' " HTML5 tags
+Plugin 'mattn/emmet-vim' " HTML completion
+Plugin 'tpope/vim-surround' " Enclose text with quotes, parens, etc
+Plugin 'tpope/vim-fugitive' " Git plugin
+Plugin 'tpope/vim-repeat' " Allows the . command to work with more actions
+Plugin 'tpope/vim-dispatch' " Send jobs straight to a background shell
+Plugin 'tpope/vim-unimpaired' " Extra shortcuts for moving next/previous
+Plugin 'Raimondi/delimitMate' " Autocompletes parenthesis and quotes
+Plugin 'bling/vim-airline' " Pretty statusbar
+Plugin 'altercation/vim-colors-solarized' " Color scheme
+Plugin 'mustache/vim-mustache-handlebars' " Handlebars support
+Plugin 'reedes/vim-lexical' " Spellchecking
+Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy file finder
+Plugin 'christoomey/vim-tmux-navigator' " <C-hjkl> to move between both vim and tmux
+Plugin 'pangloss/vim-javascript' " Better Javascript syntax highlighting
+Plugin 'scrooloose/syntastic' " Syntax checking
 " ***End plugin list***
 
 call vundle#end()
@@ -24,6 +28,15 @@ call vundle#end()
 " Syntax highlighting
 filetype plugin indent on
 syntax enable
+
+" Syntastic recommended settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Tabs are always 4 literal spaces
 set softtabstop=4
