@@ -21,9 +21,13 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# Default editor
+export EDITOR=vim
+
 # turn on 256-color terminal
 export TERM=xterm-256color
 
 # Set capslock tap to mean escape
 if command -v xcape 2>/dev/null; then
     xcape -e 'Control_L=Escape'
+fi
