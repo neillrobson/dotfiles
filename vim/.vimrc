@@ -64,8 +64,13 @@ set timeoutlen=1000 ttimeoutlen=0 " Immediately return to normal mode with escap
 let delimitMate_expand_cr = 1 " tab in when <CR> is hit within parens
 
 " Color scheme
-set background=dark
+set background=light
 colorscheme solarized
+
+" GUI settings
+if has('gui_running')
+    set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 14
+endif
 
 " Airline settings
 let g:airline_theme='solarized'
