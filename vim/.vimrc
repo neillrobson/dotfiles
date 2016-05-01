@@ -82,4 +82,4 @@ set noshowmode " Get rid of the typical mode indicator
 nmap ; :
 nmap Q @q
 nmap <silent> <leader>/ :nohlsearch<CR>
-let g:user_emmet_leader_key = '<C-s>'
+let g:user_emmet_leader_key = '<C-c>'
