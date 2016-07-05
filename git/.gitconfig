@@ -1,0 +1,9 @@
+[user]
+	name = Neill Robson
+	email = nlrobson@ncsu.edu
+[core]
+	editor = vim
+[push]
+	default = simple
+[init]
+	templatedir = ~/.git_template
