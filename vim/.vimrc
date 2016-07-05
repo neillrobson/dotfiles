@@ -4,21 +4,28 @@ call vundle#begin()
 
 " ***Plugins go here***
 Plugin 'gmarik/Vundle.vim' " Plugin manager
-Plugin 'othree/html5.vim' " HTML5 tags
-Plugin 'mattn/emmet-vim' " HTML completion
+
 Plugin 'tpope/vim-surround' " Enclose text with quotes, parens, etc
 Plugin 'tpope/vim-fugitive' " Git plugin
 Plugin 'tpope/vim-repeat' " Allows the . command to work with more actions
 Plugin 'tpope/vim-dispatch' " Send jobs straight to a background shell
 Plugin 'tpope/vim-unimpaired' " Extra shortcuts for moving next/previous
+
 Plugin 'Raimondi/delimitMate' " Autocompletes parenthesis and quotes
-Plugin 'bling/vim-airline' " Pretty statusbar
-Plugin 'altercation/vim-colors-solarized' " Color scheme
-Plugin 'mustache/vim-mustache-handlebars' " Handlebars support
-Plugin 'reedes/vim-lexical' " Spellchecking
-Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy file finder
-Plugin 'christoomey/vim-tmux-navigator' " <C-hjkl> to move between both vim and tmux
+Plugin 'mattn/emmet-vim' " HTML completion
+Plugin 'othree/html5.vim' " HTML5 tags
 Plugin 'pangloss/vim-javascript' " Better Javascript syntax highlighting
+Plugin 'mustache/vim-mustache-handlebars' " Handlebars support
+
+Plugin 'vim-airline/vim-airline' " Pretty statusbar
+Plugin 'vim-airline/vim-airline-themes' " Prettier statusbar
+Plugin 'altercation/vim-colors-solarized' " Color scheme
+
+Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy file finder
+Plugin 'majutsushi/tagbar' " Navigate between class and function references like an IDE
+Plugin 'christoomey/vim-tmux-navigator' " <C-hjkl> to move between both vim and tmux
+
+Plugin 'reedes/vim-lexical' " Spellchecking
 Plugin 'scrooloose/syntastic' " Syntax checking
 " ***End plugin list***
 
