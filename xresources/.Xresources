@@ -3,7 +3,7 @@
 
 ! Fonts
 Xft.dpi: 144
-URxvt.font: xft:Ubuntu Mono derivative Powerline:size=14
+URxvt.font: xft:Ubuntu Mono derivative Powerline:size=16
 URxvt.letterSpace: -1
 
 ! Other URxvt config
