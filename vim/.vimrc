@@ -35,6 +35,9 @@ call vundle#end()
 " Syntax highlighting
 filetype plugin indent on
 syntax enable
+set background=light
+colorscheme solarized
+let g:solarized_menu = 0 " No solarized menu in GUI
 
 " Syntastic recommended settings
 set statusline+=%#warningmsg#
@@ -62,18 +65,10 @@ set timeoutlen=1000 ttimeoutlen=0 " Immediately return to normal mode with escap
 " delimitMate settings
 let delimitMate_expand_cr = 1 " tab in when <CR> is hit within parens
 
-" Color scheme
-set background=light
-colorscheme solarized
-
-" GUI settings
-if has('gui_running')
-    set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 14
-endif
-
 " Airline settings
-let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'solarized'
 set laststatus=2 " Without this, must split before airline appears
 set noshowmode " Get rid of the typical mode indicator
 
