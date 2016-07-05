@@ -71,7 +71,11 @@ set laststatus=2 " Without this, must split before airline appears
 set noshowmode " Get rid of the typical mode indicator
 
 " Shortcuts and remaps
+" Due to Vim Tmux Navigator, <C-h|j|k|l> are all taken
+let mapleader = "\<Space>"
 nmap ; :
 nmap Q @q
-nmap <silent> <leader>/ :nohlsearch<CR>
+nmap <leader>t :TagbarToggle<CR>
+nmap <leader>w :w<CR>
+let g:ctrlp_map = '<leader>o'
 let g:user_emmet_leader_key = '<C-c>'
