@@ -48,6 +48,7 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers = ['python', 'flake8']
 
 " Tabs are always 4 literal spaces
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
