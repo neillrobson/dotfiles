@@ -39,14 +39,13 @@ set background=light
 colorscheme solarized
 let g:solarized_menu = 0 " No solarized menu in GUI
 
-" Syntastic recommended settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" Syntastic
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 2 " Close, but don't open, error window automatically
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_python_checkers = ['python', 'flake8']
 
 " Tabs are always 4 literal spaces
 set softtabstop=4
