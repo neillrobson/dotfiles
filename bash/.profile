@@ -27,7 +27,11 @@ export EDITOR=vim
 # turn on 256-color terminal
 export TERM=xterm-256color
 
-# Set capslock tap to mean escape
+# Remap capslock as follows:
+#  - capslock tap means "escape"
+#  - capslock + key means ctrl + key
+#  - left control means capslock
+setxkbmap -option 'ctrl:swapcaps'
 if command -v xcape 2>/dev/null; then
     xcape -e 'Control_L=Escape'
 fi
