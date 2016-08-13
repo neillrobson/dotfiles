@@ -75,9 +75,13 @@ set noshowmode " Get rid of the typical mode indicator
 " Shortcuts and remaps
 " Due to Vim Tmux Navigator, <C-h|j|k|l> are all taken
 let mapleader = "\<Space>"
-nmap ; :
+map ; :
 nmap Q @q
+" All shortcuts relating to plugins should use the leader key.
+" That way, one can transition to a plugin-free environment with minimal
+" mental effort.
 nmap <leader>t :TagbarToggle<CR>
-nmap <leader>w :w<CR>
+nmap <leader>g :Gstatus<CR>
 let g:ctrlp_map = '<leader>o'
+" Emmet needs insert-mode shortcuts, so we make an exception to our rule.
 let g:user_emmet_leader_key = '<C-c>'
