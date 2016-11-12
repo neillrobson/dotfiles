@@ -77,6 +77,14 @@ set noshowmode " Get rid of the typical mode indicator
 let mapleader = "\<Space>"
 map ; :
 nmap Q @q
+map gl :call TextwidthToggle()<CR>
+function! TextwidthToggle()
+  if &textwidth == 0
+    set tw=80
+  else
+    set tw=0
+  endif
+endfunction
 " All shortcuts relating to plugins should use the leader key.
 " That way, one can transition to a plugin-free environment with minimal
 " mental effort.
