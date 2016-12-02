@@ -68,9 +68,10 @@ set nowrap " Let text run off end of screen
 set hidden " hide buffers, don't close them
 set title " show current file being edited on window bar (of the OS)
 set timeoutlen=1000 ttimeoutlen=0 " Immediately return to normal mode with escape
+set backspace=2 " Allow backspacing over indentations, line breaks, and any inserted text
 
 " delimitMate settings
-let delimitMate_expand_cr = 1 " tab in when <CR> is hit within parens
+let delimitMate_expand_cr = 2 " tab in when <CR> is hit within parens
 
 " Airline settings
 let g:airline_powerline_fonts = 1
