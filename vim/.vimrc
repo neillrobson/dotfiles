@@ -96,8 +96,10 @@ endfunction
 " All shortcuts relating to plugins should use the leader key.
 " That way, one can transition to a plugin-free environment with minimal
 " mental effort.
-nmap <leader>t :TagbarToggle<CR>
+nmap <leader>b :TagbarToggle<CR>
 nmap <leader>g :Gstatus<CR>
 let g:ctrlp_map = '<leader>o'
+let g:lexical#spell_key = '<leader>s'
+let g:lexical#thesaurus_key = '<leader>t'
 " Emmet needs insert-mode shortcuts, so we make an exception to our rule.
 let g:user_emmet_leader_key = '<C-c>'
