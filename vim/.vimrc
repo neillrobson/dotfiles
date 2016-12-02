@@ -69,6 +69,7 @@ set hidden " hide buffers, don't close them
 set title " show current file being edited on window bar (of the OS)
 set timeoutlen=1000 ttimeoutlen=0 " Immediately return to normal mode with escape
 set backspace=2 " Allow backspacing over indentations, line breaks, and any inserted text
+set diffopt+=vertical " Always open diffs in vertical splits
 
 " delimitMate settings
 let delimitMate_expand_cr = 2 " tab in when <CR> is hit within parens
