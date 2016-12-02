@@ -1,6 +1,11 @@
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if has('win32') || has('win64')
+    let vundle_path = '$HOME/vimfiles/bundle/'
+else
+    let vundle_path = '~/.vim/bundle/'
+endif
+let &rtp .= ',' . expand(vundle_path . 'Vundle.vim')
+call vundle#begin(vundle_path)
 
 " ***Plugins go here***
 Plugin 'gmarik/Vundle.vim' " Plugin manager
@@ -38,6 +43,7 @@ syntax enable
 set background=light
 colorscheme solarized
 let g:solarized_menu = 0 " No solarized menu in GUI
+set encoding=utf-8
 
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
