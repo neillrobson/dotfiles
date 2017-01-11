@@ -10,6 +10,9 @@ alias l='ls -CF'
 # Tells bash to check commands after sudo for alias expansion
 alias sudo='sudo '
 
+# Safer alternative to 'rm'
+alias trash='gvfs-trash'
+
 alias npm-exec='PATH=$(npm bin):$PATH'
 
 alias nosetests3='nosetests-3.4'
