@@ -15,6 +15,7 @@ Plugin 'tpope/vim-fugitive' " Git plugin
 Plugin 'tpope/vim-repeat' " Allows the . command to work with more actions
 Plugin 'tpope/vim-dispatch' " Send jobs straight to a background shell
 Plugin 'tpope/vim-unimpaired' " Extra shortcuts for moving next/previous
+Plugin 'tpope/vim-liquid' " Liquid HTML template language support
 
 Plugin 'Raimondi/delimitMate' " Autocompletes parenthesis and quotes
 Plugin 'mattn/emmet-vim' " HTML completion
