@@ -32,3 +32,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Keep bash from trying to open the gnome-ssh-askpass dialogue from non-GUI
+# environment
+unset SSH_ASKPASS
