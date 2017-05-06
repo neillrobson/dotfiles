@@ -94,6 +94,7 @@ function! TextwidthToggle()
   else
     set tw=0
   endif
+  echo "Text width set to " . &textwidth
 endfunction
 " All shortcuts relating to plugins should use the leader key.
 " That way, one can transition to a plugin-free environment with minimal
