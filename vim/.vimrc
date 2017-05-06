@@ -105,3 +105,7 @@ let g:lexical#spell_key = '<leader>s'
 let g:lexical#thesaurus_key = '<leader>t'
 " Emmet needs insert-mode shortcuts, so we make an exception to our rule.
 let g:user_emmet_leader_key = '<C-c>'
+
+if &term =~ '256color'
+    set t_ut=
+endif
