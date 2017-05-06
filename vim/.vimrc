@@ -33,6 +33,8 @@ Plugin 'christoomey/vim-tmux-navigator' " <C-hjkl> to move between both vim and 
 
 Plugin 'reedes/vim-lexical' " Spellchecking
 Plugin 'scrooloose/syntastic' " Syntax checking
+
+Plugin 'junegunn/goyo.vim' " Distraction-free writing
 " ***End plugin list***
 
 call vundle#end()
@@ -101,7 +103,8 @@ endfunction
 " mental effort.
 nmap <leader>b :TagbarToggle<CR>
 nmap <leader>g :Gstatus<CR>
-let g:ctrlp_map = '<leader>o'
+nmap <leader>o :Goyo<CR>
+let g:ctrlp_map = '<leader>p'
 let g:lexical#spell_key = '<leader>s'
 let g:lexical#thesaurus_key = '<leader>t'
 " Emmet needs insert-mode shortcuts, so we make an exception to our rule.
