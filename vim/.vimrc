@@ -93,6 +93,7 @@ set noshowmode " Get rid of the typical mode indicator
 let mapleader = "\<Space>"
 map ; :
 nmap Q @q
+nmap gb :b#\|bd#<CR>
 map gl :call TextwidthToggle()<CR>
 function! TextwidthToggle()
   if &textwidth == 0
