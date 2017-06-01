@@ -32,9 +32,12 @@ Plugin 'majutsushi/tagbar' " Navigate between class and function references like
 Plugin 'christoomey/vim-tmux-navigator' " <C-hjkl> to move between both vim and tmux
 
 Plugin 'reedes/vim-lexical' " Spellchecking
+Plugin 'junegunn/goyo.vim' " Distraction-free writing
+
 Plugin 'scrooloose/syntastic' " Syntax checking
 
-Plugin 'junegunn/goyo.vim' " Distraction-free writing
+Plugin 'jdonaldson/vaxe' " Haxe plugin
+Plugin 'python-mode/python-mode' " Python plugin
 " ***End plugin list***
 
 call vundle#end()
