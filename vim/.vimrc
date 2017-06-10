@@ -124,3 +124,8 @@ let g:user_emmet_leader_key = '<C-c>'
 if &term =~ '256color'
     set t_ut=
 endif
+
+" Kadro-specific config
+if filereadable("U:\kadro.vim")
+    source "U:\kadro.vim"
+endif
