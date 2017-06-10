@@ -27,6 +27,7 @@ Plugin 'vim-airline/vim-airline' " Pretty statusbar
 Plugin 'vim-airline/vim-airline-themes' " Prettier statusbar
 Plugin 'altercation/vim-colors-solarized' " Color scheme
 
+Plugin 'scrooloose/nerdtree' " File tree explorer
 Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy file finder
 Plugin 'majutsushi/tagbar' " Navigate between class and function references like an IDE
 Plugin 'christoomey/vim-tmux-navigator' " <C-hjkl> to move between both vim and tmux
@@ -108,6 +109,8 @@ endfunction
 " mental effort.
 nmap <leader>b :TagbarToggle<CR>
 nmap <leader>g :Gstatus<CR>
+nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>f :NERDTreeFind<CR>
 nmap <leader>o :Goyo<CR>
 let g:ctrlp_map = '<leader>p'
 let g:lexical#spell_key = '<leader>s'
