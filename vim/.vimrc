@@ -44,13 +44,16 @@ Plugin 'python-mode/python-mode' " Python plugin
 call vundle#end()
 " We're done with Vundle
 
-" Syntax highlighting
+" Font and Syntax highlighting
 filetype plugin indent on
 syntax enable
 set background=light
 colorscheme solarized
 let g:solarized_menu = 0 " No solarized menu in GUI
 set encoding=utf-8
+if has('win32') || has('win64')
+    set guifont=Monaco\ for\ Powerline:h12:cANSI
+endif
 
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
