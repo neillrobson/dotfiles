@@ -65,6 +65,9 @@ let g:syntastic_python_checkers = ['python', 'flake8']
 let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_rst_checkers = ['sphinx']
 
+" Pymode
+let g:pymode_lint = 0
+
 " Tabs are always 4 literal spaces
 set tabstop=4
 set softtabstop=4
@@ -88,9 +91,14 @@ let delimitMate_expand_cr = 2 " tab in when <CR> is hit within parens
 " Airline settings
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t' " Only show file name, not path
 let g:airline_theme = 'solarized'
 set laststatus=2 " Without this, must split before airline appears
 set noshowmode " Get rid of the typical mode indicator
+
+" CtrlP settings
+let g:ctrlp_working_path_mode = 0 " Don't be smart about setting work dir
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files'] " Ignore what git ignores
 
 " Shortcuts and remaps
 " Due to Vim Tmux Navigator, <C-h|j|k|l> are all taken
