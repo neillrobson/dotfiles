@@ -134,6 +134,6 @@ if &term =~ '256color'
 endif
 
 " Kadro-specific config
-if filereadable("U:\kadro.vim")
-    source "U:\kadro.vim"
+if filereadable("kadro.vim")
+    source "kadro.vim"
 endif
