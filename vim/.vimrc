@@ -8,7 +8,7 @@ let &rtp .= ',' . expand(vundle_path . 'Vundle.vim')
 call vundle#begin(vundle_path)
 
 " ***Plugins go here***
-Plugin 'gmarik/Vundle.vim' " Plugin manager
+Plugin 'VundleVim/Vundle.vim' " Plugin manager
 
 Plugin 'tpope/vim-surround' " Enclose text with quotes, parens, etc
 Plugin 'tpope/vim-fugitive' " Git plugin
