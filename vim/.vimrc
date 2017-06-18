@@ -10,18 +10,17 @@ call vundle#begin(vundle_path)
 " ***Plugins go here***
 Plugin 'VundleVim/Vundle.vim' " Plugin manager
 
-Plugin 'tpope/vim-surround' " Enclose text with quotes, parens, etc
+Plugin 'tpope/vim-dispatch' " Send jobs straight to a background shell
 Plugin 'tpope/vim-fugitive' " Git plugin
 Plugin 'tpope/vim-repeat' " Allows the . command to work with more actions
-Plugin 'tpope/vim-dispatch' " Send jobs straight to a background shell
+Plugin 'tpope/vim-surround' " Enclose text with quotes, parens, etc
 Plugin 'tpope/vim-unimpaired' " Extra shortcuts for moving next/previous
-Plugin 'tpope/vim-liquid' " Liquid HTML template language support
 
+Plugin 'sheerun/vim-polyglot' " Support for tons of languages
+Plugin 'vim-syntastic/syntastic' " Syntax checking
 Plugin 'Raimondi/delimitMate' " Autocompletes parenthesis and quotes
 Plugin 'mattn/emmet-vim' " HTML completion
-Plugin 'othree/html5.vim' " HTML5 tags
-Plugin 'pangloss/vim-javascript' " Better Javascript syntax highlighting
-Plugin 'mustache/vim-mustache-handlebars' " Handlebars support
+Plugin 'jdonaldson/vaxe' " Haxe plugin
 
 Plugin 'vim-airline/vim-airline' " Pretty statusbar
 Plugin 'vim-airline/vim-airline-themes' " Prettier statusbar
@@ -34,11 +33,6 @@ Plugin 'christoomey/vim-tmux-navigator' " <C-hjkl> to move between both vim and 
 
 Plugin 'reedes/vim-lexical' " Spellchecking
 Plugin 'junegunn/goyo.vim' " Distraction-free writing
-
-Plugin 'scrooloose/syntastic' " Syntax checking
-
-Plugin 'jdonaldson/vaxe' " Haxe plugin
-Plugin 'python-mode/python-mode' " Python plugin
 " ***End plugin list***
 
 call vundle#end()
