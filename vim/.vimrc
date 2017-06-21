@@ -73,6 +73,7 @@ set mouse-=a " no mouse
 set relativenumber " line numbers count away from cursor
 set number " display line numbers
 set nowrap " Let text run off end of screen
+set sidescroll=1 " Only scroll by 1 char at a when moving the cursor horizontally
 set hidden " hide buffers, don't close them
 set title " show current file being edited on window bar (of the OS)
 set timeoutlen=1000 ttimeoutlen=0 " Immediately return to normal mode with escape
