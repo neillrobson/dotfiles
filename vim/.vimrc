@@ -127,7 +127,8 @@ if &term =~ '256color'
     set t_ut=
 endif
 
-" Kadro-specific config
-if filereadable("kadro.vim")
-    source "kadro.vim"
+" Local configuration
+let s:local_config_file = ''
+if filereadable(s:local_config_file)
+    exec 'source ' . s:local_config_file
 endif
