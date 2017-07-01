@@ -21,6 +21,7 @@ Plugin 'vim-syntastic/syntastic' " Syntax checking
 Plugin 'Raimondi/delimitMate' " Autocompletes parenthesis and quotes
 Plugin 'mattn/emmet-vim' " HTML completion
 Plugin 'jdonaldson/vaxe' " Haxe plugin
+Plugin 'joonty/vdebug' " DBGp plugin
 
 Plugin 'vim-airline/vim-airline' " Pretty statusbar
 Plugin 'vim-airline/vim-airline-themes' " Prettier statusbar
