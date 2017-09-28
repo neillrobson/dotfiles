@@ -83,6 +83,7 @@ set diffopt+=vertical " Always open diffs in vertical splits
 if exists('+shellslash')
     set shellslash " Always use forward slashes
 endif
+set autoread " If file has changed externally, automatically refresh Vim buffer
 
 " delimitMate settings
 let delimitMate_expand_cr = 2 " tab in when <CR> is hit within parens
@@ -117,6 +118,9 @@ function! TextwidthToggle()
   endif
   echo "Text width set to " . &textwidth
 endfunction
+if has("gui_running")
+  map <C-S> :w<CR>
+endif
 " All shortcuts relating to plugins should use the leader key.
 " That way, one can transition to a plugin-free environment with minimal
 " mental effort.
