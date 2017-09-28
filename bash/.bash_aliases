@@ -16,3 +16,5 @@ alias trash='gvfs-trash'
 alias npm-exec='PATH=$(npm bin):$PATH'
 
 alias nosetests3='nosetests-3.4'
+
+alias mux='tmuxinator'
