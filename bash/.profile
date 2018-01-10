@@ -32,6 +32,8 @@ export TERM=xterm-256color
 #  - capslock + key means ctrl + key
 #  - left control means capslock
 setxkbmap -option 'ctrl:swapcaps'
-if command -v xcape 2>/dev/null; then
-    xcape -e 'Control_L=Escape'
-fi
+xcape -e 'Control_L=Escape'
+
+# Nodejs
+export NODEJS_HOME=/usr/lib/nodejs/node-v8.9.0
+export PATH=$NODEJS_HOME/bin:$PATH
