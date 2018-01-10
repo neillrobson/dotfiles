@@ -149,7 +149,7 @@ if &term =~ '256color'
 endif
 
 " Local configuration
-let s:local_config_file = 'kadro.vim'
+let s:local_config_file = ''
 if filereadable(s:local_config_file)
     exec 'source ' . s:local_config_file
 endif
