@@ -5,6 +5,8 @@ else
     let vundle_path = '~/.vim/bundle/'
 endif
 let &rtp .= ',' . expand(vundle_path . 'Vundle.vim')
+
+filetype off " Turn off filetype checking temporarily to allow Vundle to do its thing
 call vundle#begin(vundle_path)
 
 " ***Plugins go here***
@@ -22,6 +24,8 @@ Plugin 'Raimondi/delimitMate' " Autocompletes parenthesis and quotes
 Plugin 'mattn/emmet-vim' " HTML completion
 Plugin 'jdonaldson/vaxe' " Haxe plugin
 Plugin 'joonty/vdebug' " DBGp plugin
+Plugin 'posva/vim-vue' " Vue single-file component plugin
+Plugin 'ledger/vim-ledger' " Budget syntax support
 
 Plugin 'vim-airline/vim-airline' " Pretty statusbar
 Plugin 'vim-airline/vim-airline-themes' " Prettier statusbar
@@ -84,6 +88,7 @@ if exists('+shellslash')
     set shellslash " Always use forward slashes
 endif
 set autoread " If file has changed externally, automatically refresh Vim buffer
+set autowrite
 
 " delimitMate settings
 let delimitMate_expand_cr = 2 " tab in when <CR> is hit within parens
@@ -99,6 +104,9 @@ set noshowmode " Get rid of the typical mode indicator
 " CtrlP settings
 let g:ctrlp_working_path_mode = 0 " Don't be smart about setting work dir
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files'] " Ignore what git ignores
+
+" Ledger settings
+let g:ledger_default_commodity = '$'
 
 " Shortcuts and remaps
 " Due to Vim Tmux Navigator, <C-h|j|k|l> are all taken
@@ -129,6 +137,7 @@ nmap <leader>g :Gstatus<CR>
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
 nmap <leader>o :Goyo<CR>
+nmap <leader>i :call vaxe#ImportClass()<CR>
 let g:ctrlp_map = '<leader>p'
 let g:lexical#spell_key = '<leader>s'
 let g:lexical#thesaurus_key = '<leader>t'
