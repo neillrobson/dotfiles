@@ -1,3 +1,3 @@
-inoremap <silent> <buffer> <Tab>
+inoremap <silent> <buffer> <C-@>
     \ <C-r>=ledger#autocomplete_and_align()<CR>
-vnoremap <silent> <buffer> <Tab> :LedgerAlign<CR>
+vnoremap <silent> <buffer> <C-@> :LedgerAlign<CR>
