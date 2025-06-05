@@ -1,0 +1,20 @@
+return {
+    {
+        'tpope/vim-commentary'
+    },
+    {
+        'tpope/vim-fugitive'
+    },
+    {
+        'tpope/vim-repeat'
+    },
+    {
+        'tpope/vim-surround'
+    },
+    {
+        'tpope/vim-speeddating'
+    },
+    {
+        'tpope/vim-unimpaired'
+    }
+}
