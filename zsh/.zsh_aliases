@@ -1,0 +1,21 @@
+alias vi=nvim
+alias vim=nvim
+
+alias prm='(){ rm -rv $1 | pv -l -s $( du -a $1 | wc -l ) > /dev/null ;}'
+
+# Pendo-specific
+
+alias local-start="brew services start memcached && brew services start redis"
+alias local-stop="brew services stop memcached && brew services stop redis"
+
+function pest() {
+    TZ=America/New_York npx jest "$1" --coverage=false
+}
+
+function west() {
+    TZ=America/New_York npx jest "$1" --coverage=false --watch
+}
+
+function pestdb() {
+    node --inspect-brk node_modules/.bin/jest --runInBand --coverage=false "$1"
+}
