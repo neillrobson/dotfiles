@@ -1,6 +1,20 @@
-dotfiles
-========
+# dotfiles
 
-Neill Robson's Linux configuration files, managed with GNU Stow.
+> Neill Robson's MacOS configuration files, managed with GNU Stow.
 
-This repository is archived due to the author no longer working extensively with many of the Linux tools covered here.
+## Usage
+
+1. Install GNU Stow: `brew install stow`
+
+2. Clone this repository.
+
+3. For each application whose dotfiles you want to copy over, run:
+
+    ```
+    stow -vRt ~ zsh
+    ```
+
+    Where `zsh` is the name of the application (a directory in this repository).
+
+    > [!NOTE]
+    > The Stow flags (in declaration order) add verbosity, purge old symlinks, and set the target directory to home.
