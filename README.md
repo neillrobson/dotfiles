@@ -16,5 +16,5 @@
 
     Where `zsh` is the name of the application (a directory in this repository).
 
-    > [!NOTE]
-    > The Stow flags (in declaration order) add verbosity, purge old symlinks, and set the target directory to home.
+> [!NOTE]
+> The Stow flags (in declaration order) add verbosity, purge old symlinks, and set the target directory to home.
