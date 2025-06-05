@@ -1,9 +1,49 @@
 [user]
-	name = Neill Robson
-	email = neillrobson811@gmail.com
-[core]
-	editor = vim
+    name = Neill Robson
+    email = neill@neillrobson.com
+    signingkey = 1E4594A4E43D3B344D306CBCBBB0818D8A2006E8
+[includeIf "hasconfig:remote.*.url:*pendo-io*/**"]
+    path = ~/.gitconfig-pendo
 [push]
-	default = simple
+    default = simple
+[pull]
+    rebase = true
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    pf = push --force-with-lease
+    pu = push -u origin HEAD
+    pri = pull --rebase=interactive origin
+    # The first command (starting with colon) specifies the autocompletion behavior of the alias.
+    ff = "!f() { : git checkout ; git switch --quiet --detach; git fetch origin $1:$1; git switch --quiet -; }; f"
+    amend = commit --amend --no-edit
+    recommit = "!f() { : git commit ; git commit -eF $(git rev-parse --git-dir)/COMMIT_EDITMSG; }; f"
+    skip = update-index --skip-worktree
+    unskip = update-index --no-skip-worktree
+    ls-skip = "!f() { git ls-files -v | grep '^S'; }; f"
+    # Default branch computation
+    dbr = "!f() { git remote show origin 2> /dev/null | sed -n '/HEAD branch/s/.*: //p'; }; f"
+    dbl = "!f() { if git show-ref --quiet refs/heads/main; then echo main; else echo master; fi }; f"
+    db = "!f() { remote=$(git dbr); local=$(git dbl); echo ${remote:-$local}; }; f"
+    # Branch creation (from default branch)
+    nb = "!f() { default=$(git db); git switch -c nlr-$1${2:+-auto}${3:+-$3}${2:+-$2} ${4-$default}; }; f"
+    new = "!f() { git nb $1 ${2-dev} '' $3; }; f"
+    nfe = "!f() { git nb $1 ${2-dev} fe $3; }; f"
+    out = "!f() { default=$(git db); git switch ${default:-master}; }; f"
+    gone = "!f() { git fetch -p; git branch -v | awk '/\\[gone]/{print $1}' | xargs git branch -D; }; f"
+[core]
+    editor = nvim
+    pager = less -x1,5
+[commit]
+    gpgsign = true
+[mergetool "nvim"]
+    cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
+[merge]
+    tool = nvim
 [init]
-	templatedir = ~/.git_template
+    defaultBranch = main
+    templatedir = ~/.git_template
+[rebase]
+    autosquash = true
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+

@@ -1,0 +1,23 @@
+#!/bin/bash
+# Prepend Jira ticket ID to commit messages
+
+FILE=$1
+MESSAGE=$(cat $FILE)
+HEAD=$(echo "$MESSAGE" | head -1)
+
+# Don't make modifications to a squash/fixup commit
+if [[ $HEAD =~ ^squash!|^fixup! ]];then
+  exit 0;
+fi
+
+# Pendo standard branch names take the form:
+# initials-app-12345-auto-fe-dev
+# we don't care about initials or anything after the number.
+TICKET=$(git rev-parse --abbrev-ref HEAD | grep -Eo '(\w+-)?[0-9]+' | tr "[:lower:]" "[:upper:]")
+
+# Don't prepend empty ticket numbers to the commit message
+if [[ $TICKET == "" || "$MESSAGE" == "$TICKET"* ]];then
+  exit 0;
+fi
+
+echo "$TICKET $MESSAGE" > $FILE
