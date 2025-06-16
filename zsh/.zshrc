@@ -164,7 +164,7 @@ load-nvmrc() {
   export NODE_PATH=$(npm root --quiet -g)
 }
 add-zsh-hook chpwd load-nvmrc
-load-nvmrc
+load-nvmrc >/dev/null
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
