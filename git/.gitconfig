@@ -45,6 +45,6 @@
     templatedir = ~/.git_template
 [rebase]
     autosquash = true
-[url "git@github.com:"]
-    insteadOf = https://github.com/
-
+[diff]
+	colormoved = dimmed-zebra
+    colormovedws = ignore-all-space
