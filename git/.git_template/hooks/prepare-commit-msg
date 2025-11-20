@@ -3,10 +3,10 @@
 
 FILE=$1
 MESSAGE=$(cat $FILE)
-HEAD=$(echo "$MESSAGE" | head -1)
+SUBJECT=$(echo "$MESSAGE" | head -1)
 
 # Don't make modifications to a squash/fixup commit
-if [[ $HEAD =~ ^squash!|^fixup! ]];then
+if [[ $SUBJECT =~ ^squash!|^fixup! ]];then
   exit 0;
 fi
 
@@ -15,9 +15,13 @@ fi
 # we don't care about initials or anything after the number.
 TICKET=$(git rev-parse --abbrev-ref HEAD | grep -Eo '(\w+-)?[0-9]+' | tr "[:lower:]" "[:upper:]")
 
-# Don't append empty ticket numbers to the commit message
-if [[ $TICKET == "" || "$MESSAGE" == *"$TICKET" ]];then
+# Don't append empty ticket numbers to the commit subject
+if [[ $TICKET == "" || "$SUBJECT" == *"$TICKET" ]];then
   exit 0;
 fi
 
-echo "$MESSAGE $TICKET" > $FILE
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    sed -i '' "1s/$/ $TICKET/" $FILE
+else
+    sed -i "1s/$/ $TICKET/" $FILE
+fi
