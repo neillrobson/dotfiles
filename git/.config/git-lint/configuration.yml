@@ -1,4 +1,7 @@
 commits:
+  body:
+    presence:
+      enabled: false
   subject:
     prefix:
       enabled: true
