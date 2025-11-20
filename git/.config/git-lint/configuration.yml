@@ -1,0 +1,11 @@
+commits:
+  subject:
+    prefix:
+      enabled: true
+      severity: warn
+      includes:
+        - Add
+        - Update
+        - Fix
+        - Remove
+        - Refactor
