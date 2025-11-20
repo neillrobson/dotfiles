@@ -4,8 +4,8 @@ commits:
       enabled: true
       severity: warn
       includes:
-        - "([A-Z]+-[0-9]+ )?Add"
-        - "([A-Z]+-[0-9]+ )?Update"
-        - "([A-Z]+-[0-9]+ )?Fix"
-        - "([A-Z]+-[0-9]+ )?Remove"
-        - "([A-Z]+-[0-9]+ )?Refactor"
+        - Add
+        - Update
+        - Fix
+        - Remove
+        - Refactor
