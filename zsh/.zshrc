@@ -191,3 +191,12 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$HOME/sdk/google-cloud-sdk/bin:$PATH"
+
+# gem
+gembin=`(gem env | sed -n "s/.*EXECUTABLE DIRECTORY: \(.*\)/\1/p")`
+export PATH="$gembin:$PATH"
+
+# Postgresql setup
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+
+[ -f "/Users/neill.robson/.ghcup/env" ] && . "/Users/neill.robson/.ghcup/env" # ghcup-env
