@@ -75,6 +75,7 @@ commits:
         - Establish
         - Evaluate
         - Examine
+        - Exclude
         - Execute
         - Exit
         - Expand
@@ -105,9 +106,9 @@ commits:
         - Identify
         - Implement
         - Import
+        - Include
         - Indicate
         - Init
-        - Initialise
         - Initialize
         - Initiate
         - Input

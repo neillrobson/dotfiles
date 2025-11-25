@@ -21,7 +21,7 @@ if [[ $TICKET == "" || "$SUBJECT" == *"$TICKET" ]];then
 fi
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    sed -i '' "1s/$/ $TICKET/" $FILE
+    sed -i '' "1s/$/ $TICKET/;1s/^[[:space:]]*//" $FILE
 else
-    sed -i "1s/$/ $TICKET/" $FILE
+    sed -i "1s/$/ $TICKET/;1s/^[[:space:]]*//" $FILE
 fi
