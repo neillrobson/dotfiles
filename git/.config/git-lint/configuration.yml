@@ -221,6 +221,7 @@ commits:
         - Transform
         - Translate
         - Transmit
+        - Trim
         - Truncate
         - Try
         - Turn
