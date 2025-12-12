@@ -183,8 +183,10 @@ commits:
         - Require
         - Reset
         - Resolve
+        - Respond
         - Retrieve
         - Return
+        - Revert
         - Roll
         - Rollback
         - Round
@@ -195,6 +197,7 @@ commits:
         - Search
         - Select
         - Send
+        - Separate
         - Serialize
         - Serve
         - Set
@@ -211,6 +214,7 @@ commits:
         - Submit
         - Subscribe
         - Sum
+        - Surface
         - Swap
         - Sync
         - Synchronize
