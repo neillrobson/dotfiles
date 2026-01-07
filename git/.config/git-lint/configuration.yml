@@ -4,7 +4,7 @@ commits:
       enabled: false
   subject:
     prefix:
-      enabled: true
+      enabled: false
       severity: warn
       includes:
         - Accept
@@ -202,6 +202,7 @@ commits:
         - Serve
         - Set
         - Show
+        - Simplify
         - Simulate
         - Source
         - Specify
